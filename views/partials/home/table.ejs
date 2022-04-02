@@ -1,0 +1,39 @@
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Item</th>
+        <th scope="col">Price</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for(let i = 0; i < 5; i++) { %>   
+      <tr>
+        <td>
+            <input class="form-control" type="text" name="item" id="item" readonly>
+        </td>
+        <td>
+            <input class="form-control" type="number" name="price" id="price" readonly>
+        </td>
+        <td>
+            <input class="form-control" type="number" name="quantity" id="quantity">
+        </td>
+        <td>
+            <input class="form-control" type="number" name="amount" id="amount" readonly>
+        </td>
+      </tr>
+      <% } %> 
+    </tbody>
+    <tfoot>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Total:</td>
+            <td>
+                <input class="form-control" type="number" name="total" id="total" readonly>
+            </td>
+        </tr>
+    </tfoot>
+  </table>

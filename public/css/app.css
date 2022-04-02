@@ -1,0 +1,33 @@
+.section-header h1{
+    text-align: center;
+}
+
+.section-home table {
+    width: min-content;
+}
+
+.section-home table input{
+    background-color: #ffffff;
+    border: none;
+} 
+
+.section-home table #item {
+    width: 200px;
+}
+
+.section-home table #price {
+    width: 100px;
+}
+
+.section-home table #quantity {
+    width: 70px;
+}
+
+.section-home table #amount {
+    width: 100px;
+}
+
+.section-home .container:nth-child(1), 
+.container:nth-child(2), .container:nth-child(3) {
+    width: auto;
+}
