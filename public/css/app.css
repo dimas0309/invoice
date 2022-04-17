@@ -4,12 +4,31 @@
 
 .section-home table {
     width: min-content;
+    display: block;
+    overflow: auto;
+    height: 360px;
+}
+
+.section-home table th {
+    background-color: lightgray;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    inset-block-start: 0;
+}
+
+.section-home table tfoot {
+    background-color: lightgray;
+    position: sticky;
+    inset-block-end: 0;
+
 }
 
 .section-home table input{
     background-color: #ffffff;
     border: none;
 } 
+
 
 .section-home table #item {
     width: 200px;

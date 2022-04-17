@@ -17,7 +17,7 @@ const addProduct = () => {
         setProduct(list[0],list[1])
     
         let len = product.length;
-    
+
         for (let i = 0; i < len; i++){
             tbody.children[i].children[0].children[0].value = product[i].item;
             tbody.children[i].children[1].children[0].value = product[i].price;
@@ -51,7 +51,12 @@ const getTotal = () => {
 
 addProduct();
 getTotal();
+
  
+
+
+
+
 
 
  

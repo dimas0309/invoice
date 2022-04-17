@@ -6,8 +6,8 @@
         Add
     </button>
     <datalist id="productlist">
-        <% for(let result of results) {%>
-        <option value="<%=result.item%> => <%=result.price%>">
+        <% for(let product of products) {%>
+        <option value="<%=product.item%> => <%=product.price%>">
         <%}%>    
     </datalist>
 </div>
