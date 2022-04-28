@@ -24,6 +24,7 @@ CREATE TABLE invoice_line (
    quantity INT NOT NULL,
    amount DECIMAL(8,2) NOT NULL,
    invoice_id INT,
+   created_at TIMESTAMP DEFAULT NOW(),
    FOREIGN KEY (invoice_id) REFERENCES invoice(id)
 );
 

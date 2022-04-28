@@ -42,9 +42,9 @@ app.get('/', (req,res) => {
 
        const products = results[0];
        const invoiceId = results[1][0].invoiceId + 1;
-
+       
        console.log(invoiceId);
-
+       
        res.render('invoices/home',{products,invoiceId})
    })
 })
