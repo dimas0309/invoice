@@ -51,7 +51,7 @@ app.get('/', (req,res) => {
 
 app.post('/', (req,res) => {
     
-    const {item,price,quantity,amount,total,invoiceId}  = req.body;
+    const {item,price,quantity,amount,total,invoiceId,balance_due, amount_paid}  = req.body;
     const items = Object.values(item.filter(Boolean));
     const prices = Object.values(price.filter(Boolean));
     const quantities = Object.values(quantity.filter(Boolean));
@@ -60,7 +60,9 @@ app.post('/', (req,res) => {
 
     const setInvoice = () => {
         const invoice = {
-            total: total
+            total: total,
+            amount_paid: amount_paid,
+            balance_due: balance_due
         }
 
         db.query(

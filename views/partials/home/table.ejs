@@ -1,7 +1,7 @@
 
 <p>INV<%=invoiceId%></p>
 <p ></p> 
-<table class="table mt-3">
+<table class="table">
     <thead>
       <tr>
         <th scope="col" >Item</th>
@@ -11,9 +11,9 @@
       </tr>
     </thead>
 
-  <form action="/" method="post">
+  <form action="/" method="POST">
     <tbody>
-      <% for(let i = 0; i < 20; i++) { %> 
+      <% for(let i = 0; i < 8; i++) { %> 
       <tr>
         <td>
             <input class="form-control" type="text" name="item" id="item" readonly>
@@ -41,6 +41,22 @@
             <td>
                 <input class="form-control" type="number" name="total" id="total" readonly>
             </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>Amount Paid:</td>
+          <td>
+              <input class="form-control" type="number" name="amount_paid" id="amount_paid" required>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td>Balance Due:</td>
+          <td>
+              <input class="form-control" type="number" name="balance_due" id="balance_due" readonly>
+          </td>
         </tr>
         <tr>
           <td></td>

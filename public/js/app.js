@@ -49,8 +49,27 @@ const getTotal = () => {
     }
 }
 
+const getBalanceDue = () => {
+    const total = tfoot.children[0].children[3].children[0];
+    const amountPaid = tfoot.children[1].children[3].children[0];
+    const balanceDue = tfoot.children[2].children[3].children[0];
+    
+    amountPaid.addEventListener('click', () => {
+        const balanced = amountPaid.value - total.value;
+
+        if (balanced >= 0){
+            balanceDue.value = amountPaid.value - total.value;
+        } else {
+            balanceDue.value = 0;
+        }
+         
+    })
+
+}
+
 addProduct();
 getTotal();
+getBalanceDue();
 
  
 

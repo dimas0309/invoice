@@ -14,6 +14,8 @@ CREATE TABLE products (
 CREATE TABLE invoice (
    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
    total DECIMAL(8,2) NOT NULL,
+   amount_paid DECIMAL(8,2) NOT NULL,
+   balance_due DECIMAL(8,2) NOT NULL,
    invoice_date TIMESTAMP DEFAULT NOW()
 );
 

@@ -1,4 +1,4 @@
-const purbtn = tfoot.children[1].children[1].children[0];
+const purbtn = tfoot.children[3].children[1].children[0];
 
 const setDate = () => {
     const home = document.querySelector('.section-home');
@@ -19,7 +19,7 @@ const printPage = () => {
     p.innerHTML = "Ave. San vicente de paul, #88, Los Mina";
     home.children[0].children[0].remove();
     home.children[0].children[1].remove();
-    tfoot.children[1].children[1].children[0].setAttribute('hidden','true');
+    tfoot.children[3].children[1].children[0].setAttribute('hidden','true');
 }
 
 const formatTable = () => {
@@ -28,22 +28,23 @@ const formatTable = () => {
     property.removeProperty('overflow-x');
     property.removeProperty('overflow-y');
 
-    for (let i = 5;i < 10; i++){
-        tbody.children[i].remove();
-    }
-    for (let i = 5;i < 10; i++){
-        tbody.children[i].remove();
-    }
-    for (let i = 5;i < 7; i++){
-        tbody.children[i].remove();
-    }
+    // for (let i = 5;i < 10; i++){
+    //     tbody.children[i].remove();
+    // }
+    // for (let i = 5;i < 10; i++){
+    //     tbody.children[i].remove();
+    // }
+    // for (let i = 5;i < 7; i++){
+    //     tbody.children[i].remove();
+    // }
 
-    //tfoot.children[1].remove();
 }
 
 setDate();
 
 purbtn.addEventListener('click', () => {
+
+    
     printPage();
     formatTable();
     window.print();
