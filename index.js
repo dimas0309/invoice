@@ -9,6 +9,7 @@ const port = process.env.PORT || process.env.SERVER_PORT;
 const ejsMate = require('ejs-mate');
 const mysql = require('mysql2');
 const { resolve } = require('path');
+const reportRoutes = require('./routes/reports')
  
 const db = mysql.createConnection({
 	host: process.env.DB_HOST,
@@ -99,6 +100,8 @@ app.post('/', (req,res) => {
 
     res.redirect('/');
 })
+
+app.use('/reports', reportRoutes);
 
 app.listen(port, () => {
 	console.log(`APP IS LISTENING ON PORT ${port}!`);
